@@ -12,32 +12,22 @@
 </style>
 
 <script>
+  
 window.onload = function () {
-//get_songs("#last_10_songs", rss_urls["top_artists"]);
-//get_songs("#last_10_songs");
-
-fm = new jlastfm("slicenice");
-fm.init();
-<!-- xml_all(); -->
-<!-- get_last_10(); -->
+    fm = new jlastfm("slicenice","#jlastfm");
+    fm.init();
 }
+
 </script>
 
 </head>
 
 <body>
    <div class="container">
-
      <div class="page-header">
        <h1>jLastfm widget</h1>
        <p class="lead"><i>javascript/jquery/bootstrap last.fm statistics display</i> </p>
      </div>
-
-<!-- <div class="progress"> -->
-<!--   <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"> -->
-<!--     <span class="sr-only">60% Complete</span> -->
-<!--   </div> -->
-<!-- </div> -->
 
      <div class="row">
        <div class="col-md-8" id="links">
@@ -47,84 +37,18 @@ fm.init();
 	 </ul>
        </div>
 
-       <div class="col-md-4 small" id="lastfm"> <!-- last.fm -->
-<!------------------------------------------------------------------------------------------->	 
-	 <h3>Last.fm</h3>
-	 <ul class="nav nav-tabs"><!-- level 1 (top level) tabs -->
-	   <li class="active"><a href="#last_10_songs" data-toggle="tab">Last 10 songs</a></li>
-	   <li><a href="#songs" data-toggle="tab">Songs</a></li>
-	   <li><a href="#artists" data-toggle="tab">Artists</a></li>
-	 </ul>
-
-	 <!-- level 1 (top level) content. #last_10_songs , #songs, #artists -->
-	 <div class="tab-content small"> 
-
-	   <!-- Last 10 Songs -------------------------------------------------------------->	   
-	   <div class="tab-pane active" id="last_10_songs"></div>
-
-	   <!-- Songs       ---------------------------------------------------------------->
-	   <div class="tab-pane" id="songs"> <!-- #songs -->
-	     <ul class="nav nav-tabs"> <!-- tabs -->
-	       <li class="active"><a href="#songs_week" data-toggle="tab">week</a></li>
-	       <li><a href="#songs_3month" data-toggle="tab">3 month</a></li>
-	       <li><a href="#songs_6month" data-toggle="tab">6 month</a></li>
-	       <li><a href="#songs_12month" data-toggle="tab">12 month</a></li>
-	       <li><a href="#songs_overall" data-toggle="tab">Overall</a></li>
-	     </ul>
-	     
-	     <div class="tab-content"> <!-- content -->
-	       <div class="tab-pane active" id="songs_week"></div>
-	       <div class="tab-pane" id="songs_3month"></div>
-	       <div class="tab-pane" id="songs_6month"></div>
-	       <div class="tab-pane" id="songs_12month"></div>
-	       <div class="tab-pane" id="songs_overall"></div>
-	     </div>
-	   </div><!-- /end level 2 tab-pane -->
-
-	   <!-- Artists     ---------------------------------------------------------------->
-	   <div class="tab-pane" id="artists"> <!-- #artists --> 
-	     <ul class="nav nav-tabs"> <!-- tabs -->
-	       <li class="active"><a href="#artists_week" data-toggle="tab">week</a></li>
-	       <li><a href="#artists_3month" data-toggle="tab">3 month</a></li>
-	       <li><a href="#artists_6month" data-toggle="tab">6 month</a></li>
-	       <li><a href="#artists_12month" data-toggle="tab">12 month</a></li>
-	       <li><a href="#artists_overall" data-toggle="tab">Overall</a></li>
-	     </ul>
-	     
-	     <div class="tab-content"> <!-- content -->
-	       <div class="tab-pane active" id="artists_week"></div>
-	       <div class="tab-pane" id="artists_3month"></div>
-	       <div class="tab-pane" id="artists_6month"></div>
-	       <div class="tab-pane" id="artists_12month"></div>
-	       <div class="tab-pane" id="artists_overall"></div>
-	     </div> <!-- /end content  -->
-	   </div> <!-- /end level 2 tab-pane -->
-	   
-	 </div> <!-- /end level 1(top level) tab-pane -->
-
-	 
-       </div> <!-- /end last_fm container -->
-<!------------------------------------------------------------------------------------------->
-     </div> <!-- /end .row
-
-
-     
+       <div class="col-md-4 small" id="jlastfm"></div> <!-- lastfm widget container -->
+       
+     </div> <!-- end row -->
    </div> <!-- end container -->
-  
 
-  
 </body>
 </html>
 
 
-	 <!--   <li class="active"><a href="#last_10_songs" data-toggle="tab">Last 10 songs</a></li> -->
-	 <!--   <li><a href="#overall_artists" data-toggle="tab">Top Songs Overall</a></li> -->
-	 <!--   <li><a href="#overall_songs" data-toggle="tab" >Messages</a></li> -->
-	 <!-- </ul> -->
 
-	 <!-- <div class="tab-content"> -->
-	 <!--   <div class="tab-pane active" id="last_10_songs">1</div> -->
-	 <!--   <div class="tab-pane" id="overall_songs">2</div> -->
-	 <!--   <div class="tab-pane" id="overall_artists">3</div> -->
-	 <!--   <div class="tab-pane" id="settings">4</div> -->
-	 <!-- </div> -->
+<!-- <div class="progress"> -->
+<!--   <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"> -->
+<!--     <span class="sr-only">60% Complete</span> -->
+<!--   </div> -->
+<!-- </div> -->

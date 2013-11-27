@@ -9,8 +9,10 @@
         -jjrh (Nov 2013).
  */
 
-var jlastfm = function(username){
+var jlastfm = function(username,selector){
 
+    
+    this.selector = selector;
     this.rss_urls = {
 	"last_10_songs": "http://ws.audioscrobbler.com/1.0/user/"+username+"/recenttracks.rss",
 	"loved_tracks": "http://ws.audioscrobbler.com/2.0/user/"+username+"/lovedtracks.rss",
@@ -38,8 +40,9 @@ var jlastfm = function(username){
 }
 
 jlastfm.prototype.init = function(){
-	this.xml_all();
-	this.get_last_10();
+    $(this.selector).html(this.html_template);
+    this.xml_all();
+    this.get_last_10();
 }
 
     /* do RSS stuff here... */
@@ -288,57 +291,5 @@ jlastfm.prototype.build_dom_xml = function(t,d,x,parentThis){ //function(stat_da
 
 }
 
-
-
-/*
-<div class="col-md-4 small" id="lastfm">
-	 <!-- last.fm -->
-	 <h3>Last.fm</h3>
-	 <ul class="nav nav-tabs">
-	   <li class="active"><a href="#last_10_songs" data-toggle="tab">Last 10 songs</a></li>
-	   <li><a href="#songs" data-toggle="tab">Songs</a></li>
-	   <li><a href="#artists" data-toggle="tab">Artists</a></li>
-
-	 </ul>
-
-	 <div class="tab-content">
-	   <div class="tab-pane active" id="last_10_songs">
-	   </div>
-
-	   <div class="tab-pane" id="songs">
-	     <ul class="nav nav-tabs">
-	       <li class="active"><a href="#songs_week" data-toggle="tab">week</a></li>
-	       <li><a href="#songs_3month" data-toggle="tab">3 months</a></li>
-	       <li><a href="#songs_6month" data-toggle="tab">6 months</a></li>
-	       <li><a href="#songs_12month" data-toggle="tab">12 months</a></li>
-	       <li><a href="#songs_overall" data-toggle="tab">Overall</a></li>
-	     </ul>
-	     <div class="tab-content">
-	       <div class="tab-pane active" id="songs_week">week song</div>
-	       <div class="tab-pane" id="songs_3month">3month</div>
-	       <div class="tab-pane" id="songs_6month">6month</div>
-	       <div class="tab-pane" id="songs_12month">12month</div>
-	       <div class="tab-pane" id="songs_overall">overall</div>
-	       </div>
-	   </div>
-
-	   <div class="tab-pane" id="artists">
-	     <ul class="nav nav-tabs">
-	       <li class="active"><a href="#artists_week" data-toggle="tab">week</a></li>
-	       <li><a href="#artists_3month" data-toggle="tab">3 months</a></li>
-	       <li><a href="#artists_6month" data-toggle="tab">6 months</a></li>
-	       <li><a href="#artists_12month" data-toggle="tab">12 months</a></li>
-	       <li><a href="#artists_overall" data-toggle="tab">Overall</a></li>
-	     </ul>
-	     <div class="tab-content">
-	       <div class="tab-pane active" id="artists_week">week artist</div>
-	       <div class="tab-pane" id="artists_3month">3month</div>
-	       <div class="tab-pane" id="artists_6month">6month</div>
-	       <div class="tab-pane" id="artists_12month">12month</div>
-	       <div class="tab-pane" id="artists_overall">overall</div>
-	       </div>
-	   </div>
-	 </div>
-       </div> <!-- end last_fm container -->
-     </div>
-*/
+//jlastfm.prototype.html_template = "asdf";
+jlastfm.prototype.html_template = '<div id="lastfm"><h3>Last.fm</h3><ul class="nav nav-tabs"><li class="active"><a href="#last_10_songs" data-toggle="tab">Last 10 songs</a></li><li><a href="#songs" data-toggle="tab">Songs</a></li><li><a href="#artists" data-toggle="tab">Artists</a></li></ul><div class="tab-content small"><div class="tab-pane active" id="last_10_songs"></div><div class="tab-pane" id="songs"><ul class="nav nav-tabs"><li class="active"><a href="#songs_week" data-toggle="tab">week</a></li><li><a href="#songs_3month" data-toggle="tab">3 month</a></li><li><a href="#songs_6month" data-toggle="tab">6 month</a></li><li><a href="#songs_12month" data-toggle="tab">12 month</a></li><li><a href="#songs_overall" data-toggle="tab">Overall</a></li></ul><div class="tab-content"><div class="tab-pane active" id="songs_week"></div><div class="tab-pane" id="songs_3month"></div><div class="tab-pane" id="songs_6month"></div><div class="tab-pane" id="songs_12month"></div><div class="tab-pane" id="songs_overall"></div></div></div><div class="tab-pane" id="artists"><ul class="nav nav-tabs"><li class="active"><a href="#artists_week" data-toggle="tab">week</a></li><li><a href="#artists_3month" data-toggle="tab">3 month</a></li><li><a href="#artists_6month" data-toggle="tab">6 month</a></li><li><a href="#artists_12month" data-toggle="tab">12 month</a></li><li><a href="#artists_overall" data-toggle="tab">Overall</a></li></ul><div class="tab-content"><div class="tab-pane active" id="artists_week"></div><div class="tab-pane" id="artists_3month"></div><div class="tab-pane" id="artists_6month"></div><div class="tab-pane" id="artists_12month"></div><div class="tab-pane" id="artists_overall"></div></div></div></div>'
