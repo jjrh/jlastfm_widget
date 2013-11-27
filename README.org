@@ -10,7 +10,7 @@
 * Intro
   After taking a look at http://imagegen.last.fm/basic10/tracks/slicenice.gif a coworker had on his website, I said:  "oh I can do better...". 
 
-  Since [[http://getbootstrap.com/][bootstrap]] is my new go-to thing for web-design (/since they do a better job than I ever could/) I designed the base widget
+  Since [[http://getbootstrap.com/][bootstrap]] is my new go-to thing for web-design (/they do a better job than I ever could/) I designed the base widget
   template to use bootstrap components. This could be easily re-factored out.
 
 * Goals
@@ -37,14 +37,19 @@
   
 * Reference & sources:
     
-  | name      | repo                                                 | file/s                                                                        |
-  |-----------+------------------------------------------------------+-------------------------------------------------------------------------------|
-  | jQuery    | https://github.com/jquery/jquery  (not sure version) | unsure                                                                        |
-  | bootstrap | https://github.com/twbs/bootstrap (version 3?)       | https://github.com/twbs/bootstrap/tree/master/dist                            |
-  | xml2json  | https://github.com/josefvanniekerk/jQuery-xml2json   | https://github.com/josefvanniekerk/jQuery-xml2json/blob/master/js/xml2json.js |
-  |           |                                                      |                                                                               |
+  | name                                                 | repo                                                          | file/s                                                                        |
+  |------------------------------------------------------+---------------------------------------------------------------+-------------------------------------------------------------------------------|
+  | jQuery                                               | https://github.com/jquery/jquery  (not sure version)          | unsure                                                                        |
+  | bootstrap                                            | https://github.com/twbs/bootstrap (version 3?)                | https://github.com/twbs/bootstrap/tree/master/dist                            |
+  | xml2json                                             | https://github.com/josefvanniekerk/jQuery-xml2json            | https://github.com/josefvanniekerk/jQuery-xml2json/blob/master/js/xml2json.js |
+  | information on converting rss \rightarrow json[fn:1] | http://stackoverflow.com/questions/670511/convert-rss-to-json |                                                                               |
 
   And of course [[http://www.last.fm/][last.fm]]!
 
------------------------------------------------  
+-----------------------------------------------
+
+* Footnotes
+
+[fn:1] This uses the google ajax service. I had started with this part first (before the xml2json part). The code could most likely be refactored to use the xml2json stuff removing google from the mix
+  
   
