@@ -15,8 +15,11 @@
 window.onload = function () {
 //get_songs("#last_10_songs", rss_urls["top_artists"]);
 //get_songs("#last_10_songs");
-xml_all();
-get_last_10();
+
+fm = new jlastfm("slicenice");
+fm.init();
+<!-- xml_all(); -->
+<!-- get_last_10(); -->
 }
 </script>
 
