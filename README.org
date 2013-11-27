@@ -21,6 +21,20 @@
   One of the goals of the project was to not use api keys to access data. All the data I needed/wanted was offered in XML
   and or json format. (sadly not much in json) This fit the goal of having a mostly drop in 
 
+* usage
+  Initialization:
+  #+BEGIN_SRC js
+  fm = new jlastfm("slicenice","#jlastfm");
+  fm.init();
+  #+END_SRC
+
+  Include this div, with the selector you passed into the intializator
+  #+BEGIN_SRC html
+  <div id="jlastfm"></div>
+  #+END_SRC
+  
+
+  
 * Reference & sources:
     
   | name      | repo                                                 | file/s                                                                        |
