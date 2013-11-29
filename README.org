@@ -1,11 +1,3 @@
-#+TITLE: jlastfm widget
-#+AUTHOR: Justin Hornosty (jjrh)
-#+EMAIL: jjrh70@gmail.com
-#+OPTIONS: section-number-format: 1
-#+options: num:nil
-#+OPTIONS: ^:nil
-#+preamble: ji
-#+STARTUP: align showall
 
 * Intro
   After taking a look at http://imagegen.last.fm/basic10/tracks/slicenice.gif a coworker had on his website, I said:  "oh I can do better...". 
