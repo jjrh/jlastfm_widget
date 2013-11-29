@@ -24,7 +24,8 @@
   #+BEGIN_SRC html
   <div id="jlastfm"></div>
   #+END_SRC
-  
+
+* Demo
   The demo will *not* work browsing the file path. (google's rss \rightarrow json breaks)
   for a demo you can do
   #+begin_src sh
