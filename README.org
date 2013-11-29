@@ -25,7 +25,15 @@
   <div id="jlastfm"></div>
   #+END_SRC
   
-
+  ~The demo will *not* work browsing the file path. (google's rss \rightarrow json breaks)~
+  for a demo you can do
+  #+begin_src sh
+  $ cd jlastfm_widget
+  $ python -m SimpleHTTPServer
+  #+end_src
+  then point your browser to localhost:8000
+  
+  
   
 * Reference & sources:
     
