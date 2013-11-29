@@ -176,6 +176,7 @@ jlastfm.prototype.build_tracks = function(){
 	var tracks = v["toptracks"]["track"];
 
 	$("#songs_"+track_type).append("<ul>");
+
 	for(var i = 0; i< tracks.length; i++){
 	    var artist = {"title":tracks[i].artist.name.value,
 			  "url": tracks[i].artist.url.value
@@ -223,10 +224,11 @@ jlastfm.prototype.build_artists = function(){
 jlastfm.prototype.build_charts = function(){
     var parentThis = this;
     $.each(this.stat_data["weeklycharts"]["weeklytrackchart"], function(k,v){
-	// var track_type = v["toptracks"]["@attributes"]["type"];
 	var track_type = "week";
 	var tracks = v["track"];
+
 	$("#songs_"+track_type).append("<ul>");
+
 	for(var i = 0; i< tracks.length && i<10; i++){
 	    var artist = {"title": tracks[i].artist.value,
 			  "url": tracks[i].url.value.split("_/")[0] // stupid hack, they don't give me the url directly.
