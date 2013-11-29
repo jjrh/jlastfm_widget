@@ -6,9 +6,9 @@
   template to use bootstrap components. This could be easily re-factored out.
 
 * Goals
-   - Drop in solution - input my username and bam we got stats. This lead to the next point,
+   - Drop in solution - input my user-name and bam we got stats. This lead to the next point,
    - No API key usage. All the data is we need is available without needing a api key. The only advantage one would get is json returned data.
-   - Bootstrap usage to have an aesthetically pleasing look that would fit the rest of my site and allow the widget to be themed
+   - Bootstrap usage for aesthetically an pleasing look that would fit the rest of my site and allow the widget to be themed
      
   One of the goals of the project was to not use api keys to access data. All the data I needed/wanted was offered in XML
   and or json format. (sadly not much in json) This fit the goal of having a mostly drop in 
@@ -20,7 +20,7 @@
   fm.init();
   #+END_SRC
 
-  Include this div, with the selector you passed into the intializator
+  Include this div, with the selector you passed into the 'jlastfm'
   #+BEGIN_SRC html
   <div id="jlastfm"></div>
   #+END_SRC
@@ -42,6 +42,6 @@
 
 * Footnotes
 
-[fn:1] This uses the google ajax service. I had started with this part first (before the xml2json part). The code could most likely be refactored to use the xml2json stuff removing google from the mix
+[fn:1] This uses the google ajax service. I had started with this part first (before the xml2json part). The code could most likely be re-factored to use the xml2json stuff removing google from the mix
   
   
